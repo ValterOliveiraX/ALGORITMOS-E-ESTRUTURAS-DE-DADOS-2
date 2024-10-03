@@ -1,5 +1,5 @@
 
-public class NoDuplo<A> {
+public class NoDuplo<A> implements Iterator<A> {
     private NoDuplo<A> proximo;
     private NoDuplo<A> anterior;
     private A elemento;
@@ -35,5 +35,20 @@ public class NoDuplo<A> {
 
     public void setElemento(A elemento) {
         this.elemento = elemento;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return proximo != null;
+    }
+
+    @Override
+    public Iterator<A> next() {
+        return proximo;
+    }
+
+    @Override
+    public A value() {
+        return elemento;
     }
 }

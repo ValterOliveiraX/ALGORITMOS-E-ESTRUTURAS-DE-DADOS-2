@@ -1,5 +1,5 @@
 
-public interface Lista<A> {
+public interface Lista<A> extends Iterable<A>  {
 
     void adicionar(A elem, Integer indice);
     void adicionarInicio(A elem);

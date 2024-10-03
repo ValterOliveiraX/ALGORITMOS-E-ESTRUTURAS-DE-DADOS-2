@@ -49,6 +49,7 @@ public class ListaDupla<A> implements Lista<A> {
 
         var no = inicio;
         for(int i=0; i<indice; i++) {
+            System.out.println("Passei aqui");
             no = no.getProximo();
         }
 
@@ -117,5 +118,10 @@ public class ListaDupla<A> implements Lista<A> {
         if (indice < 0 || indice > tamanho) {
             throw new RuntimeException("Indice invalido: " + indice);
         }
+    }
+
+    @Override
+    public Iterator<A> iterator() {
+        return inicio;
     }
 }

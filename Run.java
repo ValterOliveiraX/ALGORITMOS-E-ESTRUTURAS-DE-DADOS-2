@@ -1,32 +1,46 @@
-
 public class Run {
 
     public static void main(String[] args) {
 
-        TabelaHash<String> th = new TabelaHashImpl<>(100);
-        th.inserir("Valter");
-        th.inserir("David");
-        th.inserir("Cadilhe");
-        th.inserir("Marcos");
-        th.inserir("Ana");
-        th.inserir("Ana1");
-        th.inserir("Ana2");
-        th.inserir("Ana3");
-        th.inserir("Ana4");
-        th.inserir("Ana5");
+        // TabelaHash<String> th = new TabelaHashImpl<>(100);
+        // th.inserir("Valter");
+        // th.inserir("David");
+        // th.inserir("Cadilhe");
+        // th.inserir("Marcos");
+        // th.inserir("Ana");
+        // th.inserir("Ana1");
+        // th.inserir("Ana2");
+        // th.inserir("Ana3");
+        // th.inserir("Ana4");
+        // th.inserir("Ana5");
 
-        // Lista<String> lista = new ListaDupla<>();
+        Lista<String> lista = new ListaDupla<>();
         
-        // lista.adicionarFim("A");
-        // lista.adicionarFim("B");
-        // lista.adicionarFim("D");
-        // lista.adicionarFim("E");
-        // lista.adicionar("C", 2);
+        lista.adicionarFim("A");
+        lista.adicionarFim("B");
+        lista.adicionarFim("D");
+        lista.adicionarFim("E");
+        lista.adicionar("C", 2);
 
-        // // lista.remover(0);
-        // // lista.remover(1);
-        // // lista.remover(2);
-        // // lista.remover(3);
+        for (int i=0; i<lista.tamanho(); i++) {
+            String str = lista.buscar(i);
+            System.out.println(str);
+        }
+        
+        var iterator = lista.iterator();
+        while(iterator != null){
+            var str = iterator.value();
+            System.out.println(str);
+
+            iterator = iterator.next();
+        }
+        
+        
+
+        // lista.remover(0);
+        // lista.remover(1);
+        // lista.remover(2);
+        // lista.remover(3);
         // lista.remover(4);
 
         // System.out.println("Tamanho: " + lista.tamanho());
